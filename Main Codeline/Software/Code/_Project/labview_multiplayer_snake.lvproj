@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="14008000">
+<Project Type="Project" LVVersion="19008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
@@ -29,11 +29,23 @@
 		<Item Name="jMsgs" Type="Folder" URL="../../Shared/jMsgs">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Modules" Type="Folder"/>
+		<Item Name="Modules" Type="Folder">
+			<Item Name="Module_ENG_SnakeProcessor.lvclass" Type="LVClass" URL="../../Module_ENG_SnakeProcessor/Module_ENG_SnakeProcessor.lvclass"/>
+			<Item Name="Module_ENG_SocketServer.lvclass" Type="LVClass" URL="../../Module_ENG_SocketServer/Module_ENG_SocketServer.lvclass"/>
+			<Item Name="Module_ENG_SocketClient.lvclass" Type="LVClass" URL="../../Module_ENG_SocketClient/Module_ENG_SocketClient.lvclass"/>
+			<Item Name="Module_UI_SnakeClient.lvclass" Type="LVClass" URL="../../Module_UI_SnakeClient/Module_UI_SnakeClient.lvclass"/>
+		</Item>
 		<Item Name="Shared" Type="Folder">
 			<Item Name="Globals" Type="Folder" URL="../../Shared/Globals">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Player" Type="Folder"/>
+			<Item Name="Snake" Type="Folder">
+				<Item Name="Snake.lvclass" Type="LVClass" URL="../../Shared/Snake/Snake.lvclass"/>
+			</Item>
+			<Item Name="Board" Type="Folder"/>
+			<Item Name="Cell" Type="Folder"/>
+			<Item Name="Direction STYP.ctl" Type="VI" URL="../../Shared/Direction STYP.ctl"/>
 		</Item>
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -41,86 +53,38 @@
 				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
 				<Item Name="File - ReadWrite Permission.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/File - ReadWrite Permission.vi"/>
 				<Item Name="Folder - Unlock Files.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Folder - Unlock Files.vi"/>
-				<Item Name="JET_QSM - Add State [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM - Add State [Array API].vi"/>
-				<Item Name="JET_QSM - Add State [String API].vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM - Add State [String API].vi"/>
-				<Item Name="JET_QSM - Add State to Front [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM - Add State to Front [Array API].vi"/>
-				<Item Name="JET_QSM - Add State to Front [String API].vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM - Add State to Front [String API].vi"/>
-				<Item Name="JET_QSM - Add State(s).vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Add State(s).vi"/>
-				<Item Name="JET_QSM - Add STOP.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Add STOP.vi"/>
-				<Item Name="JET_QSM - Flush.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Flush.vi"/>
-				<Item Name="JET_QSM - Get Next State.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Get Next State.vi"/>
-				<Item Name="JET_QSM - Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Initialize.vi"/>
-				<Item Name="JET_QSM - INVALID State.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - INVALID State.vi"/>
-				<Item Name="JET_QSM - Set Debug Options.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Set Debug Options.vi"/>
-				<Item Name="JET_QSM_Debug STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM_Debug STYP.ctl"/>
-				<Item Name="JET_QSM_Element STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM_Element STYP.ctl"/>
-				<Item Name="JET_QSM_InvalidOption STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM_InvalidOption STYP.ctl"/>
-				<Item Name="JET_QSM_Refnum STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Private/JET_QSM_Refnum STYP.ctl"/>
-				<Item Name="JETPanel.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Labs/JET Panel/JETPanel.lvclass"/>
-				<Item Name="JETPanel_MenuBarMode_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Labs/JET Panel/JETPanel_MenuBarMode_STYP.ctl"/>
-				<Item Name="JETPanel_Location_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Labs/JET Panel/JETPanel_Location_STYP.ctl"/>
-				<Item Name="JETPanel_Behavior_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Labs/JET Panel/JETPanel_Behavior_STYP.ctl"/>
-				<Item Name="JET_QSM - Flush Debug Queue.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET_QSM/Code/Public/JET_QSM - Flush Debug Queue.vi"/>
-				<Item Name="JETPanel_Bounds_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Labs/JET Panel/JETPanel_Bounds_STYP.ctl"/>
-				<Item Name="JSMA.lvlibp" Type="LVLibp" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp">
-					<Item Name="Reserved jMsgs" Type="Folder">
-						<Item Name="jMsg_JSMA_ApplicationShutdown.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_ApplicationShutdown/jMsg_JSMA_ApplicationShutdown.lvclass"/>
-						<Item Name="jMsg_JSMA_Exception.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_Exception/jMsg_JSMA_Exception.lvclass"/>
-						<Item Name="jMsg_JSMA_ModuleOffline.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_ModuleOffline/jMsg_JSMA_ModuleOffline.lvclass"/>
-						<Item Name="jMsg_JSMA_ModuleOnline.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_ModuleOnline/jMsg_JSMA_ModuleOnline.lvclass"/>
-						<Item Name="jMsg_JSMA_ModuleStats.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_ModuleStats/jMsg_JSMA_ModuleStats.lvclass"/>
-						<Item Name="jMsg_JSMA_SubscriptionChange.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_SubscriptionChange/jMsg_JSMA_SubscriptionChange.lvclass"/>
-					</Item>
-					<Item Name="Supporting VIs" Type="Folder">
-						<Item Name="jFlag_MasterShutdown.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMasterShutdownFlag/jFlag_MasterShutdown.lvclass"/>
-						<Item Name="jMasterTable_Message.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMasterTable_Message/jMasterTable_Message.lvclass"/>
-						<Item Name="jMasterTable_Module.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMasterTable_Module/jMasterTable_Module.lvclass"/>
-						<Item Name="jMasterTable_Subscription.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMasterTable_Subscription/jMasterTable_Subscription.lvclass"/>
-						<Item Name="jModuleStats STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jModuleStats/jModuleStats STYP.ctl"/>
-						<Item Name="jModuleStats_Stats STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jModuleStats/jModuleStats_Stats STYP.ctl"/>
-						<Item Name="jModuleStats_Status STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jModuleStats/jModuleStats_Status STYP.ctl"/>
-						<Item Name="jRouter.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jRouter Class/jRouter.lvclass"/>
-						<Item Name="JSMA_GetClassName.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/Shared/JSMA_GetClassName.vi"/>
-						<Item Name="JSMAExceptionTypeList STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_JSMA_Exception/JSMAExceptionTypeList STYP.ctl"/>
-						<Item Name="jSubscription.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jSubscription Class/jSubscription.lvclass"/>
-						<Item Name="jSubscription_Background.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jSubscription_Background/jSubscription_Background.lvclass"/>
-						<Item Name="jSubscription_Critical.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jSubscription_Critical/jSubscription_Critical.lvclass"/>
-					</Item>
-					<Item Name="Public Classes" Type="Folder">
-						<Item Name="jApplication.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jApplication/jApplication.lvclass"/>
-						<Item Name="jMsg_Addressed.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg_CORE/jMsg_Addressed/jMsg_Addressed.lvclass"/>
-					</Item>
-					<Item Name="jMsg.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jMsg Class/jMsg.lvclass"/>
-					<Item Name="jModule.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/jModule Class/jModule.lvclass"/>
-					<Item Name="whitespace.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/1abvi3w/vi.lib/Utility/error.llb/whitespace.ctl"/>
-					<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/1abvi3w/vi.lib/Utility/error.llb/Trim Whitespace.vi"/>
-					<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/1abvi3w/vi.lib/Utility/error.llb/Error Cluster From Error Code.vi"/>
-					<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/1abvi3w/vi.lib/Utility/LVClass/Get LV Class Path.vi"/>
-					<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA/Libraries/JSMA.lvlibp/1abvi3w/vi.lib/Utility/error.llb/Clear Errors.vi"/>
-				</Item>
-				<Item Name="Module_JSMA_UI_ExceptionHandler.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Exception Handler UI/Module_JSMA_UI_ExceptionHandler.lvclass"/>
-				<Item Name="JSMA Standard jMsg.lvlibp" Type="LVLibp" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp">
-					<Item Name="jMsg_Sys_Error.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_Sys_Error/jMsg_Sys_Error.lvclass"/>
-					<Item Name="jMsg_Sys_ESTOPCommand.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_Sys_ESTOPCommand/jMsg_Sys_ESTOPCommand.lvclass"/>
-					<Item Name="jMsg_Sys_ESTOPReset.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_Sys_ESTOPReset/jMsg_Sys_ESTOPReset.lvclass"/>
-					<Item Name="jMsg_Sys_UIPanel_Open.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_Sys_UIPanelOpen/jMsg_Sys_UIPanel_Open.lvclass"/>
-					<Item Name="jMsg_Sys_VersionInfo.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_Sys_VersionInfo/jMsg_Sys_VersionInfo.lvclass"/>
-					<Item Name="jMsg_USERENTRY_Cancelled.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_USERENTRY_Cancelled/jMsg_USERENTRY_Cancelled.lvclass"/>
-					<Item Name="jMsg_USERENTRY_Numeric.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_USERENTRY_Numeric/jMsg_USERENTRY_Numeric.lvclass"/>
-					<Item Name="jMsg_USERENTRY_Path.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_USERENTRY_Path/jMsg_USERENTRY_Path.lvclass"/>
-					<Item Name="jMsg_USERENTRY_String.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Engineering/JSMA Messages/Libraries/JSMA Standard jMsg.lvlibp/jMsg_USERENTRY_String/jMsg_USERENTRY_String.lvclass"/>
-				</Item>
-				<Item Name="VI Control - MCListbox - Replace Contents_1.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_1.vi"/>
-				<Item Name="VI Control - MCListbox - Replace Contents_3.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_3.vi"/>
-				<Item Name="VI Control - MCListbox - Replace Contents_2.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_2.vi"/>
-				<Item Name="VI Control - MCListbox - Replace Contents.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents.vi"/>
-				<Item Name="Daemon_JSMAExceptionNotificationUI_FormatMessage.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA Exception Handler UI/Private/Daemon_JAMAExceptionNotificationUI/Daemon_JSMAExceptionNotificationUI_FormatMessage.vi"/>
-				<Item Name="Daemon_JSMAExceptionNotificationUI - Status STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA Exception Handler UI/Private/Daemon_JAMAExceptionNotificationUI/Daemon_JSMAExceptionNotificationUI - Status STYP.ctl"/>
-				<Item Name="Daemon_JSMAExceptionNotificationUI.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA Exception Handler UI/Private/Daemon_JAMAExceptionNotificationUI/Daemon_JSMAExceptionNotificationUI.vi"/>
-				<Item Name="Daemon_JSMAExceptionNotificationUI Launcher.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JSMA Exception Handler UI/Private/Daemon_JAMAExceptionNotificationUI/Daemon_JSMAExceptionNotificationUI Launcher.vi"/>
-				<Item Name="VI Control - MCListbox - Set Column Justification.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Set Column Justification.vi"/>
-				<Item Name="VI Control - MCListbox - Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Initialize.vi"/>
-				<Item Name="File - File Name - Add Timestamp.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/File - File Name - Add Timestamp.vi"/>
+				<Item Name="JET_QSM - Add State [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State [Array API].vi"/>
+				<Item Name="JET_QSM - Add State [String API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State [String API].vi"/>
+				<Item Name="JET_QSM - Add State to Front [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State to Front [Array API].vi"/>
+				<Item Name="JET_QSM - Add State to Front [String API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State to Front [String API].vi"/>
+				<Item Name="JET_QSM - Add State(s).vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Add State(s).vi"/>
+				<Item Name="JET_QSM - Add STOP.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Add STOP.vi"/>
+				<Item Name="JET_QSM - Flush.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Flush.vi"/>
+				<Item Name="JET_QSM - Get Next State.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Get Next State.vi"/>
+				<Item Name="JET_QSM - Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Initialize.vi"/>
+				<Item Name="JET_QSM - INVALID State.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - INVALID State.vi"/>
+				<Item Name="JET_QSM - Set Debug Options.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Set Debug Options.vi"/>
+				<Item Name="JET_QSM_Debug STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM_Debug STYP.ctl"/>
+				<Item Name="JET_QSM_Element STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM_Element STYP.ctl"/>
+				<Item Name="JET_QSM_InvalidOption STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM_InvalidOption STYP.ctl"/>
+				<Item Name="JET_QSM_Refnum STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM_Refnum STYP.ctl"/>
+				<Item Name="JETPanel.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel.lvclass"/>
+				<Item Name="JETPanel_MenuBarMode_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_MenuBarMode_STYP.ctl"/>
+				<Item Name="JETPanel_Location_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_Location_STYP.ctl"/>
+				<Item Name="JETPanel_Behavior_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_Behavior_STYP.ctl"/>
+				<Item Name="JET_QSM - Flush Debug Queue.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Public/JET_QSM - Flush Debug Queue.vi"/>
+				<Item Name="JETPanel_Bounds_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_Bounds_STYP.ctl"/>
+				<Item Name="VI Control - MCListbox - Replace Contents_1.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_1.vi"/>
+				<Item Name="VI Control - MCListbox - Replace Contents_3.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_3.vi"/>
+				<Item Name="VI Control - MCListbox - Replace Contents_2.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents_2.vi"/>
+				<Item Name="VI Control - MCListbox - Replace Contents.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Replace Contents.vi"/>
+				<Item Name="VI Control - MCListbox - Set Column Justification.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Set Column Justification.vi"/>
+				<Item Name="VI Control - MCListbox - Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Initialize.vi"/>
+				<Item Name="File - File Name - Add Timestamp.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET File-Dir-Path/File - File Name - Add Timestamp.vi"/>
+				<Item Name="JSMA API.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA/Libraries/JSMA API.lvlib"/>
+				<Item Name="JSMAExceptionHanding.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA Exception Handler UI/JSMAExceptionHanding.lvlib"/>
+				<Item Name="JSMAjMsg_Standard.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA Standard Messages/JSMAjMsg_Standard.lvlib"/>
+				<Item Name="JETPanel_Size_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_Size_STYP.ctl"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -162,6 +126,8 @@
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="LVRowAndColumnTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnTypeDef.ctl"/>
+				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
+				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
 			</Item>
 			<Item Name="Main_Host - Handle Errors.vi" Type="VI" URL="../../Main_Host/Main_Host - Handle Errors.vi"/>
 			<Item Name="Main_Host - Initialize Main Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Main Paths.vi"/>
