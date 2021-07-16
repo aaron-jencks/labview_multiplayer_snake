@@ -1,0 +1,77 @@
+@startuml
+object SnakeProcessor {
+Handles simulating the board
+- board : Board
+- players[] : Player
+}
+
+class Board {
+- Cell[] : Cell
++ tick()
+}
+
+class Cell {
++ contents : Variant
++ contentType : CellType
++ setValue(content, type)
+}
+
+enum CellType {
++ Player
++ Food
++ Empty
+}
+
+Cell <|-- CellType
+
+Board "1" --> "1..*" Cell : "Contains"
+
+class Player {
+- username : String
+- score : U32
+- snakeRoot : Snake
++ changeDirection(direction)
++ tick()
+}
+
+SnakeProcessor "1" --> "1..*" Player : "Contains"
+
+class Food {
++ pointValue : U32
+}
+
+Cell "1" --> "1" Food : "Can Contain"
+Cell "1..*" --> "1" Player : "Can Contain"
+
+class Snake {
++ hasChild : Boolean
++ child : Snake
++ direction : Direction
+}
+
+Snake --> Snake : "Can have children"
+Player "1" --> "1" Snake : "Uses"
+
+SnakeProcessor "1" --> "1" Board : "Handles"
+
+object SocketServer {
+Handles receiving moves from clients
+and accepts connections
+and sends board updates
+}
+
+object SocketClient {
+Handles sending moves
+and connecting to the server
+and receives board updates
+}
+
+object SnakeClient {
+Handles accepting moves from the player
+and displaying boards
+}
+
+SocketServer "1" --> "0..*" SocketClient : "via TCP"
+SnakeProcessor "1" <--> "1" SocketServer : "via jMsg"
+SocketClient "1" <--> "1" SnakeClient : "via jMsg"
+@enduml
