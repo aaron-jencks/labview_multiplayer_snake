@@ -45,7 +45,32 @@
 			</Item>
 			<Item Name="Board" Type="Folder"/>
 			<Item Name="Cell" Type="Folder"/>
-			<Item Name="Direction STYP.ctl" Type="VI" URL="../../Shared/Direction STYP.ctl"/>
+			<Item Name="Communication" Type="Folder">
+				<Item Name="Packets" Type="Folder">
+					<Item Name="Connect" Type="Folder">
+						<Item Name="Connect.lvclass" Type="LVClass" URL="../../Shared/Connect/Connect.lvclass"/>
+					</Item>
+					<Item Name="Disconnect" Type="Folder">
+						<Item Name="Disconnect.lvclass" Type="LVClass" URL="../../Shared/Disconnect/Disconnect.lvclass"/>
+					</Item>
+					<Item Name="Direction" Type="Folder">
+						<Item Name="Direction.lvclass" Type="LVClass" URL="../../Shared/Direction/Direction.lvclass"/>
+					</Item>
+					<Item Name="Score" Type="Folder">
+						<Item Name="Score.lvclass" Type="LVClass" URL="../../Shared/Score/Score.lvclass"/>
+					</Item>
+					<Item Name="Map" Type="Folder">
+						<Item Name="Map.lvclass" Type="LVClass" URL="../../Shared/Map/Map.lvclass"/>
+					</Item>
+				</Item>
+				<Item Name="Packet.lvclass" Type="LVClass" URL="../../Shared/TCP Packet/Packet.lvclass"/>
+			</Item>
+			<Item Name="STYPs" Type="Folder">
+				<Item Name="Direction STYP.ctl" Type="VI" URL="../../Shared/Direction STYP.ctl"/>
+			</Item>
+		</Item>
+		<Item Name="Workbenches" Type="Folder">
+			<Item Name="TCP Communication" Type="Folder"/>
 		</Item>
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
