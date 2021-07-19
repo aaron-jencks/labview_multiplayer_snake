@@ -43,8 +43,12 @@
 			<Item Name="Snake" Type="Folder">
 				<Item Name="Snake.lvclass" Type="LVClass" URL="../../Shared/Snake/Snake.lvclass"/>
 			</Item>
-			<Item Name="Board" Type="Folder"/>
-			<Item Name="Cell" Type="Folder"/>
+			<Item Name="Board" Type="Folder">
+				<Item Name="Board.lvclass" Type="LVClass" URL="../../Shared/Board/Board.lvclass"/>
+			</Item>
+			<Item Name="Cell" Type="Folder">
+				<Item Name="Cell.lvclass" Type="LVClass" URL="../../Shared/Cell/Cell.lvclass"/>
+			</Item>
 			<Item Name="Communication" Type="Folder">
 				<Item Name="Packets" Type="Folder">
 					<Item Name="Connect" Type="Folder">
@@ -75,6 +79,8 @@
 			</Item>
 		</Item>
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
+		<Item Name="Inheritance Example.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example.vi"/>
+		<Item Name="Inheritance Example Subvi.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example Subvi.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
