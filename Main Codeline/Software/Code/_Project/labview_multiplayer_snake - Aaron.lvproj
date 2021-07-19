@@ -70,7 +70,9 @@
 			</Item>
 		</Item>
 		<Item Name="Workbenches" Type="Folder">
-			<Item Name="TCP Communication" Type="Folder"/>
+			<Item Name="TCP Communication" Type="Folder">
+				<Item Name="TCP Tester.vi" Type="VI" URL="../../../Support/TCP Communication/TCP Tester.vi"/>
+			</Item>
 		</Item>
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
