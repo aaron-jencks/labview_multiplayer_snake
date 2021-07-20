@@ -11,9 +11,7 @@ class Board {
 }
 
 class Cell {
-+ contents : Variant
 + contentType : CellType
-+ setValue(content, type)
 }
 
 enum CellType {
@@ -26,6 +24,17 @@ Cell <|-- CellType
 
 Board "1" --> "1..*" Cell : "Contains"
 
+class EmptyCell {
+}
+
+Cell <|-- EmptyCell
+
+class PlayerCell {
++player: Player
+}
+
+Cell <|-- PlayerCell
+
 class Player {
 - username : String
 - score : U32
@@ -36,12 +45,12 @@ class Player {
 
 SnakeProcessor "1" --> "1..*" Player : "Contains"
 
-class Food {
+class FoodCell {
 + pointValue : U32
 }
 
-Cell "1" --> "1" Food : "Can Contain"
-Cell "1..*" --> "1" Player : "Can Contain"
+Cell <|-- FoodCell
+PlayerCell "1..*" --> "1" Player : "Can Contain"
 
 class Snake {
 + hasChild : Boolean
