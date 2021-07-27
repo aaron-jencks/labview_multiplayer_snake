@@ -220,9 +220,6 @@
 			<Item Name="Main_Host - Initialize Project Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Project Paths.vi"/>
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
-			<Item Name="TCPReceiver.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/TCPReceiver/TCPReceiver.lvclass"/>
-			<Item Name="JSONPacket.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPacket/JSONPacket.lvclass"/>
-			<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPayload/JSONPayload.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
