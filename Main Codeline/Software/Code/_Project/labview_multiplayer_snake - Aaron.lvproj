@@ -30,6 +30,10 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Modules" Type="Folder">
+			<Item Name="Module_ENG_TCPServer" Type="Folder">
+				<Item Name="Private" Type="Folder"/>
+				<Item Name="Module_ENG_TCPServer.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer/Module_ENG_TCPServer.lvclass"/>
+			</Item>
 			<Item Name="Module_ENG_SnakeProcessor.lvclass" Type="LVClass" URL="../../Module_ENG_SnakeProcessor/Module_ENG_SnakeProcessor.lvclass"/>
 			<Item Name="Module_ENG_SocketServer.lvclass" Type="LVClass" URL="../../Module_ENG_SocketServer/Module_ENG_SocketServer.lvclass"/>
 			<Item Name="Module_ENG_SocketClient.lvclass" Type="LVClass" URL="../../Module_ENG_SocketClient/Module_ENG_SocketClient.lvclass"/>
@@ -118,6 +122,30 @@
 				<Item Name="JSMAExceptionHanding.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA Exception Handler UI/JSMAExceptionHanding.lvlib"/>
 				<Item Name="JSMAjMsg_Standard.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA Standard Messages/JSMAjMsg_Standard.lvlib"/>
 				<Item Name="JETPanel_Size_STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET Panel/JETPanel_Size_STYP.ctl"/>
+				<Item Name="Reshape Array to 1D VArray__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Reshape Array to 1D VArray__ogtk.vi"/>
+				<Item Name="Type Descriptor Enumeration__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Type Descriptor Enumeration__ogtk.ctl"/>
+				<Item Name="Variant to Header Info__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Variant to Header Info__ogtk.vi"/>
+				<Item Name="Type Descriptor Header__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Type Descriptor Header__ogtk.ctl"/>
+				<Item Name="Type Descriptor__ogtk.ctl" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Type Descriptor__ogtk.ctl"/>
+				<Item Name="Get Header from TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Header from TD__ogtk.vi"/>
+				<Item Name="Build Error Cluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Build Error Cluster__ogtk.vi"/>
+				<Item Name="Array Size(s)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array Size(s)__ogtk.vi"/>
+				<Item Name="Get Data Name__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Data Name__ogtk.vi"/>
+				<Item Name="Get Data Name from TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Data Name from TD__ogtk.vi"/>
+				<Item Name="Get PString__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get PString__ogtk.vi"/>
+				<Item Name="Get Last PString__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Last PString__ogtk.vi"/>
+				<Item Name="Set Data Name__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Set Data Name__ogtk.vi"/>
+				<Item Name="Get Variant Attributes__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Variant Attributes__ogtk.vi"/>
+				<Item Name="Reshape 1D Array__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Reshape 1D Array__ogtk.vi"/>
+				<Item Name="Get Array Element TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Array Element TD__ogtk.vi"/>
+				<Item Name="Get Element TD from Array TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get Element TD from Array TD__ogtk.vi"/>
+				<Item Name="Cluster to Array of VData__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Cluster to Array of VData__ogtk.vi"/>
+				<Item Name="Split Cluster TD__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Split Cluster TD__ogtk.vi"/>
+				<Item Name="Parse String with TDs__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Parse String with TDs__ogtk.vi"/>
+				<Item Name="Array to Array of VData__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array to Array of VData__ogtk.vi"/>
+				<Item Name="Array of VData to VCluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VCluster__ogtk.vi"/>
+				<Item Name="Array of VData to VArray__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VArray__ogtk.vi"/>
+				<Item Name="Get TDEnum from Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get TDEnum from Data__ogtk.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -161,12 +189,34 @@
 				<Item Name="LVRowAndColumnTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnTypeDef.ctl"/>
 				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
 				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
+				<Item Name="UTF8 Tools.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/Tools/Unicode/UTF8 Tools.lvlib"/>
+				<Item Name="JKI JSON Serialization.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI.lib/Serialization/JSON/JKI JSON Serialization.lvlib"/>
+				<Item Name="VariantType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/VariantDataType/VariantType.lvlib"/>
+				<Item Name="JKI Serialization.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI.lib/Serialization/Core/JKI Serialization.lvlib"/>
+				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
+				<Item Name="JSONtext LVClass Serializer.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JDP Science/JSONtext/LVClass Serializer/JSONtext LVClass Serializer.lvclass"/>
+				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
+				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
+				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
+				<Item Name="JDP Timestamp.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Timestamp/JDP Timestamp.lvlib"/>
+				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
+				<Item Name="Base64 Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/Base64/Base64 Support.lvlib"/>
+				<Item Name="LVDateTimeRec.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDateTimeRec.ctl"/>
+				<Item Name="JKI Unicode.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI.lib/Unicode/JKI Unicode.lvlib"/>
 			</Item>
 			<Item Name="Main_Host - Handle Errors.vi" Type="VI" URL="../../Main_Host/Main_Host - Handle Errors.vi"/>
 			<Item Name="Main_Host - Initialize Main Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Main Paths.vi"/>
 			<Item Name="Main_Host - Initialize Project Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Project Paths.vi"/>
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
+			<Item Name="TCPReceiver.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/TCPReceiver/TCPReceiver.lvclass"/>
+			<Item Name="TCPPacket.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/TCPPacket/TCPPacket.lvclass"/>
+			<Item Name="JSONPacket.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPacket/JSONPacket.lvclass"/>
+			<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPayload/JSONPayload.lvclass"/>
+			<Item Name="jMsg_TCPMessage_Send.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPMessage_Send/jMsg_TCPMessage_Send.lvclass"/>
+			<Item Name="jMsg_TCPAcceptor_NewConnection.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPAcceptor_NewConnection/jMsg_TCPAcceptor_NewConnection.lvclass"/>
+			<Item Name="jMsg_TCPMessage_Receive.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPMessage_Receive/jMsg_TCPMessage_Receive.lvclass"/>
+			<Item Name="jMsg_TCPServer_Status.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPServer_Status/jMsg_TCPServer_Status.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
