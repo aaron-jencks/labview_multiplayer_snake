@@ -30,14 +30,11 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Modules" Type="Folder">
-			<Item Name="Module_ENG_TCPServer" Type="Folder">
-				<Item Name="Private" Type="Folder"/>
-				<Item Name="Module_ENG_TCPServer.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer/Module_ENG_TCPServer.lvclass"/>
-			</Item>
 			<Item Name="Module_ENG_SnakeProcessor.lvclass" Type="LVClass" URL="../../Module_ENG_SnakeProcessor/Module_ENG_SnakeProcessor.lvclass"/>
 			<Item Name="Module_ENG_SocketServer.lvclass" Type="LVClass" URL="../../Module_ENG_SocketServer/Module_ENG_SocketServer.lvclass"/>
 			<Item Name="Module_ENG_SocketClient.lvclass" Type="LVClass" URL="../../Module_ENG_SocketClient/Module_ENG_SocketClient.lvclass"/>
 			<Item Name="Module_UI_SnakeClient.lvclass" Type="LVClass" URL="../../Module_UI_SnakeClient/Module_UI_SnakeClient.lvclass"/>
+			<Item Name="Module_ENG_TCPServer.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer/Module_ENG_TCPServer.lvclass"/>
 		</Item>
 		<Item Name="Shared" Type="Folder">
 			<Item Name="Globals" Type="Folder" URL="../../Shared/Globals">
@@ -71,10 +68,24 @@
 						<Item Name="Map.lvclass" Type="LVClass" URL="../../Shared/Map/Map.lvclass"/>
 					</Item>
 				</Item>
+				<Item Name="jMsgs" Type="Folder" URL="../../Shared/TCP/jMsgs">
+					<Property Name="NI.DISK" Type="Bool">true</Property>
+				</Item>
 				<Item Name="Packet.lvclass" Type="LVClass" URL="../../Shared/TCP Packet/Packet.lvclass"/>
+				<Item Name="TCPPacket.lvclass" Type="LVClass" URL="../../Shared/TCP/TCPPacket/TCPPacket.lvclass"/>
+				<Item Name="JSONPacket.lvclass" Type="LVClass" URL="../../Shared/TCP/JSONPacket/JSONPacket.lvclass"/>
+				<Item Name="TCPReceiver.lvclass" Type="LVClass" URL="../../Shared/TCP/TCPReceiver/TCPReceiver.lvclass"/>
+				<Item Name="TCP Receive Packet.vi" Type="VI" URL="../../Shared/TCP/TCP Receive Packet.vi"/>
+				<Item Name="TCP Send Packet.vi" Type="VI" URL="../../Shared/TCP/TCP Send Packet.vi"/>
+				<Item Name="TCPConnectionSettings STYP.ctl" Type="VI" URL="../../Shared/TCP/TCPConnectionSettings STYP.ctl"/>
 			</Item>
 			<Item Name="STYPs" Type="Folder">
 				<Item Name="Direction STYP.ctl" Type="VI" URL="../../Shared/Direction STYP.ctl"/>
+			</Item>
+			<Item Name="JSON Payloads" Type="Folder">
+				<Item Name="JSONPayload" Type="Folder">
+					<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../Shared/TCP/JSONPayload/JSONPayload.lvclass"/>
+				</Item>
 			</Item>
 		</Item>
 		<Item Name="Workbenches" Type="Folder">
@@ -210,13 +221,8 @@
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
 			<Item Name="TCPReceiver.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/TCPReceiver/TCPReceiver.lvclass"/>
-			<Item Name="TCPPacket.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/TCPPacket/TCPPacket.lvclass"/>
 			<Item Name="JSONPacket.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPacket/JSONPacket.lvclass"/>
 			<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/JSONPayload/JSONPayload.lvclass"/>
-			<Item Name="jMsg_TCPMessage_Send.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPMessage_Send/jMsg_TCPMessage_Send.lvclass"/>
-			<Item Name="jMsg_TCPAcceptor_NewConnection.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPAcceptor_NewConnection/jMsg_TCPAcceptor_NewConnection.lvclass"/>
-			<Item Name="jMsg_TCPMessage_Receive.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPMessage_Receive/jMsg_TCPMessage_Receive.lvclass"/>
-			<Item Name="jMsg_TCPServer_Status.lvclass" Type="LVClass" URL="../../../../../../labview_multiplayer_snake_personal/Main Codeline/Software/Code/Shared/jMsgs/jMsg_TCPServer_Status/jMsg_TCPServer_Status.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
