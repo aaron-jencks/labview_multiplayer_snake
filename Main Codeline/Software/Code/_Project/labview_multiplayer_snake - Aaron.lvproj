@@ -51,9 +51,6 @@
 			<Item Name="Board" Type="Folder">
 				<Item Name="Board.lvclass" Type="LVClass" URL="../../Shared/Board/Board.lvclass"/>
 			</Item>
-			<Item Name="Cell" Type="Folder">
-				<Item Name="Cell.lvclass" Type="LVClass" URL="../../Shared/Cell/Cell.lvclass"/>
-			</Item>
 			<Item Name="Communication" Type="Folder">
 				<Item Name="Packets" Type="Folder">
 					<Item Name="Connect" Type="Folder">
@@ -91,15 +88,29 @@
 					<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../Shared/TCP/JSONPayload/JSONPayload.lvclass"/>
 				</Item>
 			</Item>
+			<Item Name="Cells" Type="Folder">
+				<Item Name="Cell" Type="Folder">
+					<Item Name="Cell.lvclass" Type="LVClass" URL="../../Shared/Cell/Cell.lvclass"/>
+				</Item>
+				<Item Name="PlayerCell" Type="Folder">
+					<Item Name="PlayerCell.lvclass" Type="LVClass" URL="../../Shared/PlayerCell/PlayerCell.lvclass"/>
+				</Item>
+				<Item Name="EmptyCell" Type="Folder">
+					<Item Name="EmptyCell.lvclass" Type="LVClass" URL="../../Shared/EmptyCell/EmptyCell.lvclass"/>
+				</Item>
+				<Item Name="FoodCell" Type="Folder">
+					<Item Name="FoodCell.lvclass" Type="LVClass" URL="../../Shared/FoodCell/FoodCell.lvclass"/>
+				</Item>
+			</Item>
 		</Item>
 		<Item Name="Workbenches" Type="Folder">
 			<Item Name="TCP Communication" Type="Folder">
 				<Item Name="TCP Tester.vi" Type="VI" URL="../../../Support/TCP Communication/TCP Tester.vi"/>
 			</Item>
+			<Item Name="Inheritance Example.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example.vi"/>
+			<Item Name="Inheritance Example Subvi.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example Subvi.vi"/>
 		</Item>
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
-		<Item Name="Inheritance Example.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example.vi"/>
-		<Item Name="Inheritance Example Subvi.vi" Type="VI" URL="../../../Support/Inheritance Example/Inheritance Example Subvi.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
@@ -224,6 +235,7 @@
 			<Item Name="Main_Host - Initialize Project Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Project Paths.vi"/>
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
+			<Item Name="Player.lvclass" Type="LVClass" URL="../../Shared/Player/Player.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
