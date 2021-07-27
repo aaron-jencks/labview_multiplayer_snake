@@ -30,11 +30,15 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Modules" Type="Folder">
+			<Item Name="TCP" Type="Folder">
+				<Item Name="Module_ENG_TCPServer.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer/Module_ENG_TCPServer.lvclass"/>
+				<Item Name="Module_ENG_TCPClient.lvclass" Type="LVClass" URL="../../Module_ENG_TCPClient/Module_ENG_TCPClient.lvclass"/>
+				<Item Name="Module_ENG_TCPServer_Acceptor.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer_Acceptor/Module_ENG_TCPServer_Acceptor.lvclass"/>
+			</Item>
 			<Item Name="Module_ENG_SnakeProcessor.lvclass" Type="LVClass" URL="../../Module_ENG_SnakeProcessor/Module_ENG_SnakeProcessor.lvclass"/>
 			<Item Name="Module_ENG_SocketServer.lvclass" Type="LVClass" URL="../../Module_ENG_SocketServer/Module_ENG_SocketServer.lvclass"/>
 			<Item Name="Module_ENG_SocketClient.lvclass" Type="LVClass" URL="../../Module_ENG_SocketClient/Module_ENG_SocketClient.lvclass"/>
 			<Item Name="Module_UI_SnakeClient.lvclass" Type="LVClass" URL="../../Module_UI_SnakeClient/Module_UI_SnakeClient.lvclass"/>
-			<Item Name="Module_ENG_TCPServer.lvclass" Type="LVClass" URL="../../Module_ENG_TCPServer/Module_ENG_TCPServer.lvclass"/>
 		</Item>
 		<Item Name="Shared" Type="Folder">
 			<Item Name="Globals" Type="Folder" URL="../../Shared/Globals">
