@@ -44,7 +44,9 @@
 			<Item Name="Globals" Type="Folder" URL="../../Shared/Globals">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Player" Type="Folder"/>
+			<Item Name="Player" Type="Folder">
+				<Item Name="Player.lvclass" Type="LVClass" URL="../../Shared/Player/Player.lvclass"/>
+			</Item>
 			<Item Name="Snake" Type="Folder">
 				<Item Name="Snake.lvclass" Type="LVClass" URL="../../Shared/Snake/Snake.lvclass"/>
 			</Item>
@@ -235,7 +237,6 @@
 			<Item Name="Main_Host - Initialize Project Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Project Paths.vi"/>
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
-			<Item Name="Player.lvclass" Type="LVClass" URL="../../Shared/Player/Player.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
