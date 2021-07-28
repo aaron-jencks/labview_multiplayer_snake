@@ -84,26 +84,17 @@
 			</Item>
 			<Item Name="STYPs" Type="Folder">
 				<Item Name="Direction STYP.ctl" Type="VI" URL="../../Shared/Direction STYP.ctl"/>
+				<Item Name="Coordinate STYP.ctl" Type="VI" URL="../../Shared/Coordinate STYP.ctl"/>
 			</Item>
 			<Item Name="JSON Payloads" Type="Folder">
 				<Item Name="JSONPayload" Type="Folder">
 					<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../Shared/TCP/JSONPayload/JSONPayload.lvclass"/>
 				</Item>
 			</Item>
-			<Item Name="Cells" Type="Folder">
-				<Item Name="Cell" Type="Folder">
-					<Item Name="Cell.lvclass" Type="LVClass" URL="../../Shared/Cell/Cell.lvclass"/>
-				</Item>
-				<Item Name="PlayerCell" Type="Folder">
-					<Item Name="PlayerCell.lvclass" Type="LVClass" URL="../../Shared/PlayerCell/PlayerCell.lvclass"/>
-				</Item>
-				<Item Name="EmptyCell" Type="Folder">
-					<Item Name="EmptyCell.lvclass" Type="LVClass" URL="../../Shared/EmptyCell/EmptyCell.lvclass"/>
-				</Item>
-				<Item Name="FoodCell" Type="Folder">
-					<Item Name="FoodCell.lvclass" Type="LVClass" URL="../../Shared/FoodCell/FoodCell.lvclass"/>
-				</Item>
+			<Item Name="Food" Type="Folder">
+				<Item Name="Food.lvclass" Type="LVClass" URL="../../Shared/Food/Food.lvclass"/>
 			</Item>
+			<Item Name="Tick Coordinate.vi" Type="VI" URL="../../Shared/Tick Coordinate.vi"/>
 		</Item>
 		<Item Name="Workbenches" Type="Folder">
 			<Item Name="TCP Communication" Type="Folder">
