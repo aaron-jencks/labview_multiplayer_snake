@@ -111,8 +111,8 @@
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
-				<Item Name="File - ReadWrite Permission.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/File - ReadWrite Permission.vi"/>
-				<Item Name="Folder - Unlock Files.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Folder - Unlock Files.vi"/>
+				<Item Name="File - ReadWrite Permission.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET File-Dir-Path/File - ReadWrite Permission.vi"/>
+				<Item Name="Folder - Unlock Files.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET File-Dir-Path/Folder - Unlock Files.vi"/>
 				<Item Name="JET_QSM - Add State [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State [Array API].vi"/>
 				<Item Name="JET_QSM - Add State [String API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State [String API].vi"/>
 				<Item Name="JET_QSM - Add State to Front [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State to Front [Array API].vi"/>
