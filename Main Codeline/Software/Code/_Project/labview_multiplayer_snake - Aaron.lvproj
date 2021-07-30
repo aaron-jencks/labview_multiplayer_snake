@@ -98,6 +98,7 @@
 			<Item Name="Food" Type="Folder">
 				<Item Name="Food.lvclass" Type="LVClass" URL="../../Shared/Food/Food.lvclass"/>
 			</Item>
+			<Item Name="Board Coordinate to Picture Rectangle.vi" Type="VI" URL="../../Shared/Board/Board Coordinate to Picture Rectangle.vi"/>
 			<Item Name="Tick Coordinate.vi" Type="VI" URL="../../Shared/Tick Coordinate.vi"/>
 		</Item>
 		<Item Name="Workbenches" Type="Folder">
@@ -259,6 +260,9 @@
 				<Item Name="LVRowAndColumnUnsignedTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnUnsignedTypeDef.ctl"/>
 				<Item Name="LVPoint32TypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPoint32TypeDef.ctl"/>
 				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
+				<Item Name="Empty Picture" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Empty Picture"/>
+				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
+				<Item Name="Draw Rectangle.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Rectangle.vi"/>
 			</Item>
 			<Item Name="Main_Host - Handle Errors.vi" Type="VI" URL="../../Main_Host/Main_Host - Handle Errors.vi"/>
 			<Item Name="Main_Host - Initialize Main Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Main Paths.vi"/>
