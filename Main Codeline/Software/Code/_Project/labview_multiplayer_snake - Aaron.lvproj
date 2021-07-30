@@ -38,7 +38,10 @@
 			<Item Name="Module_ENG_SnakeProcessor.lvclass" Type="LVClass" URL="../../Module_ENG_SnakeProcessor/Module_ENG_SnakeProcessor.lvclass"/>
 			<Item Name="Module_ENG_SocketServer.lvclass" Type="LVClass" URL="../../Module_ENG_SocketServer/Module_ENG_SocketServer.lvclass"/>
 			<Item Name="Module_ENG_SocketClient.lvclass" Type="LVClass" URL="../../Module_ENG_SocketClient/Module_ENG_SocketClient.lvclass"/>
-			<Item Name="Module_UI_SnakeClient.lvclass" Type="LVClass" URL="../../Module_UI_SnakeClient/Module_UI_SnakeClient.lvclass"/>
+			<Item Name="Module_UI_TopLevel.lvclass" Type="LVClass" URL="../../Module_UI_TopLevel/Module_UI_TopLevel.lvclass"/>
+			<Item Name="Module_SP_GameDisplay.lvclass" Type="LVClass" URL="../../Module_SP_GameDisplay/Module_SP_GameDisplay.lvclass"/>
+			<Item Name="Module_SP_GameLeaderboard.lvclass" Type="LVClass" URL="../../Module_SP_GameLeaderboard/Module_SP_GameLeaderboard.lvclass"/>
+			<Item Name="Module_SP_GameStats.lvclass" Type="LVClass" URL="../../Module_SP_GameStats/Module_SP_GameStats.lvclass"/>
 		</Item>
 		<Item Name="Shared" Type="Folder">
 			<Item Name="Globals" Type="Folder" URL="../../Shared/Globals">
@@ -107,7 +110,7 @@
 		<Item Name="Main_Host.vi" Type="VI" URL="../../Main_Host/Main_Host.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
-				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
+				<Item Name="Directory - Create (Entire Chain).vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET File-Dir-Path/Directory - Create (Entire Chain).vi"/>
 				<Item Name="File - ReadWrite Permission.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/File - ReadWrite Permission.vi"/>
 				<Item Name="Folder - Unlock Files.vi" Type="VI" URL="/&lt;userlib&gt;/JET Engineering/JET File-Dir-Path/Folder - Unlock Files.vi"/>
 				<Item Name="JET_QSM - Add State [Array API].vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET_QSM/Code/Private/JET_QSM - Add State [Array API].vi"/>
@@ -166,6 +169,25 @@
 				<Item Name="Array of VData to VCluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VCluster__ogtk.vi"/>
 				<Item Name="Array of VData to VArray__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Array of VData to VArray__ogtk.vi"/>
 				<Item Name="Get TDEnum from Data__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/lvdata/lvdata.llb/Get TDEnum from Data__ogtk.vi"/>
+				<Item Name="VI Control - Disable Control.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/VI Control - Disable Control.vi"/>
+				<Item Name="JSMA_jModule_GUISubPanel.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA GUISubPanel CORE/JSMA_jModule_GUISubPanel.lvlib"/>
+				<Item Name="jSWCfg_SoftwareInfo STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/CORE/jSWCfg_SoftwareInfo STYP.ctl"/>
+				<Item Name="jSWCfg_PROPERTIES STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/CORE/jSWCfg_PROPERTIES STYP.ctl"/>
+				<Item Name="jSWCfg_TASK STYP.ctl" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/CORE/jSWCfg_TASK STYP.ctl"/>
+				<Item Name="jSWCfg_CORE.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/CORE/jSWCfg_CORE.vi"/>
+				<Item Name="jSWCfg - Get Properties.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/jSWCfg - Get Properties.vi"/>
+				<Item Name="jSWCfg - Get VersionInfo.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/jSWCfg - Get VersionInfo.vi"/>
+				<Item Name="jSWCfg - Merge.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/jSWCfg - Merge.vi"/>
+				<Item Name="jSWCfg - Add New VersionInfo.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Labs/JET SoftwareConfig/jSWCfg - Add New VersionInfo.vi"/>
+				<Item Name="VI Control - Tree - Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/Tree/VI Control - Tree - Initialize.vi"/>
+				<Item Name="VI Control - Tree - Add Item.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/Tree/VI Control - Tree - Add Item.vi"/>
+				<Item Name="VI Control - Tree - Find Item.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/Tree/VI Control - Tree - Find Item.vi"/>
+				<Item Name="JSMA SAL CORE.lvlib" Type="Library" URL="/&lt;userlib&gt;/Jet Engineering/JSMA Signal Abstraction Layer (SAL)/JSMA SAL CORE.lvlib"/>
+				<Item Name="UITable.lvclass" Type="LVClass" URL="/&lt;userlib&gt;/JET Labs/JET UITable/UITable.lvclass"/>
+				<Item Name="VI Control - MCListbox - BGColor.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - BGColor.vi"/>
+				<Item Name="VI Control - MCListbox - Set Value.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Set Value.vi"/>
+				<Item Name="VI Control - MCListbox - Shade Unused Rows.vi" Type="VI" URL="/&lt;userlib&gt;/Jet Engineering/JET VI Control/MC Listbox/VI Control - MCListbox - Shade Unused Rows.vi"/>
+				<Item Name="Position.vi" Type="VI" URL="/&lt;userlib&gt;/JET Labs/JET Panel/Position.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -228,6 +250,15 @@
 				<Item Name="Random Number (Range) I64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) I64.vi"/>
 				<Item Name="Random Number (Range) DBL.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) DBL.vi"/>
 				<Item Name="Random Number (Range).vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range).vi"/>
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
+				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
+				<Item Name="Version To Dotted String.vi" Type="VI" URL="/&lt;vilib&gt;/_xctls/Version To Dotted String.vi"/>
+				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
+				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
+				<Item Name="LVRowAndColumnUnsignedTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnUnsignedTypeDef.ctl"/>
+				<Item Name="LVPoint32TypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPoint32TypeDef.ctl"/>
+				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
 			</Item>
 			<Item Name="Main_Host - Handle Errors.vi" Type="VI" URL="../../Main_Host/Main_Host - Handle Errors.vi"/>
 			<Item Name="Main_Host - Initialize Main Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Main Paths.vi"/>
@@ -235,6 +266,13 @@
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
 			<Item Name="Create.vi" Type="VI" URL="../../Shared/Map/Create.vi"/>
+			<Item Name="Menu Button.xctl" Type="XControl" URL="../../Module_UI_TopLevel/XControl_Menu Button/Menu Button.xctl"/>
+			<Item Name="Daemon_JETAbout - Status STYP.ctl" Type="VI" URL="../../Daemon_JETAbout/Daemon_JETAbout - Status STYP.ctl"/>
+			<Item Name="Daemon_JETAbout.vi" Type="VI" URL="../../Daemon_JETAbout/Daemon_JETAbout.vi"/>
+			<Item Name="Daemon_JETAbout Launcher.vi" Type="VI" URL="../../Daemon_JETAbout/Daemon_JETAbout Launcher.vi"/>
+			<Item Name="Menu - Remove Level.vi" Type="VI" URL="../../Module_UI_TopLevel/XControl_Menu Button/_Support/Menu - Remove Level.vi"/>
+			<Item Name="Menu - Remove Button.vi" Type="VI" URL="../../Module_UI_TopLevel/XControl_Menu Button/_Support/Menu - Remove Button.vi"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
