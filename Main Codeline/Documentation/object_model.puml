@@ -1,0 +1,112 @@
+@startuml
+package Gameplay {
+
+object SnakeProcessor {
+Handles simulating the board
+- Board : Board
+- Tick Rate: U32
+}
+
+object SnakeClient {
+Handles accepting moves from the player
+and displaying boards
+}
+
+}
+
+package shared {
+
+package STYPs {
+    object Coordinate {
+    X: U32
+    Y: U32
+    }
+
+    enum Direction {
+    Up
+    Down
+    Right
+    Left
+    }
+}
+
+class Board {
+- Food: Food[]
+- Players: Player[]
+- Food Color: U32
+- Particle Size: U32
+- Height: U32
+- Width: U32
++ add_player(p: Player)
++ remove_player(p: Player)
++ get_empty_space(): Coordinate
++ is_empty_space(c: Coordinate): bool
++ Tick()
++ Display(): Image
+- player_on_board(p: Player): bool
+- player_on_food(p: Player): bool, I32
+}
+
+class Food {
++ Value: I32
++ Coordinate: Coordinate
+}
+
+Board "1" --> "0..*" Food : "Generates"
+Player --> Food : "Eats"
+
+class Player {
+- username : String
+- score : U32
+- snakeRoot : Snake
++ changeDirection(direction)
++ tick()
++ reset(initial_pos: Coordinate)
++ increment_score(amount: I32)
++ read_coordinates(): Coordinate[]
+}
+
+Board "1" --> "1..*" Player : "Contains"
+
+object SnakeComponent {
++ direction: Direction
++ coordinate: Coordinate
+}
+
+class Snake {
+- components: SnakeComponent[]
++ changeDirection(dir: Direction)
++ containsCoordinate(coord: Coordinate)
++ display(img: Image, color: U32, particle_size: U32): Image
++ tick()
+}
+
+Snake "1" --> "1..*" SnakeComponent : "Contains"
+
+Player "1" --> "1" Snake : "Uses"
+
+}
+
+SnakeProcessor "1" --> "1" Board : "Handles"
+
+package Networking {
+    object SocketServer {
+    Handles receiving moves from clients
+    and accepts connections
+    and sends board updates
+    }
+
+    object SocketClient {
+    Handles sending moves
+    and connecting to the server
+    and receives board updates
+    }
+}
+
+SnakeClient "1" --> "1" Board : "Displays"
+SnakeClient "1" --> "1" Player : "Manages"
+
+SocketServer "1" --> "0..*" SocketClient : "via TCP"
+SnakeProcessor "1" <--> "1" SocketServer : "via jMsg"
+SocketClient "1" <--> "1" SnakeClient : "via jMsg"
+@enduml
