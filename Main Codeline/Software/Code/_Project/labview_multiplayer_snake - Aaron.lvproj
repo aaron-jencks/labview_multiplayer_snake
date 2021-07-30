@@ -54,23 +54,6 @@
 				<Item Name="Board.lvclass" Type="LVClass" URL="../../Shared/Board/Board.lvclass"/>
 			</Item>
 			<Item Name="Communication" Type="Folder">
-				<Item Name="Packets" Type="Folder">
-					<Item Name="Connect" Type="Folder">
-						<Item Name="Connect.lvclass" Type="LVClass" URL="../../Shared/Connect/Connect.lvclass"/>
-					</Item>
-					<Item Name="Disconnect" Type="Folder">
-						<Item Name="Disconnect.lvclass" Type="LVClass" URL="../../Shared/Disconnect/Disconnect.lvclass"/>
-					</Item>
-					<Item Name="Direction" Type="Folder">
-						<Item Name="Direction.lvclass" Type="LVClass" URL="../../Shared/Direction/Direction.lvclass"/>
-					</Item>
-					<Item Name="Score" Type="Folder">
-						<Item Name="Score.lvclass" Type="LVClass" URL="../../Shared/Score/Score.lvclass"/>
-					</Item>
-					<Item Name="Map" Type="Folder">
-						<Item Name="Map.lvclass" Type="LVClass" URL="../../Shared/Map/Map.lvclass"/>
-					</Item>
-				</Item>
 				<Item Name="jMsgs" Type="Folder" URL="../../Shared/TCP/jMsgs">
 					<Property Name="NI.DISK" Type="Bool">true</Property>
 				</Item>
@@ -89,6 +72,24 @@
 			<Item Name="JSON Payloads" Type="Folder">
 				<Item Name="JSONPayload" Type="Folder">
 					<Item Name="JSONPayload.lvclass" Type="LVClass" URL="../../Shared/TCP/JSONPayload/JSONPayload.lvclass"/>
+				</Item>
+				<Item Name="PlayerUpdate" Type="Folder">
+					<Item Name="PlayerUpdate.lvclass" Type="LVClass" URL="../../Shared/PlayerUpdate/PlayerUpdate.lvclass"/>
+				</Item>
+				<Item Name="Map" Type="Folder">
+					<Item Name="Map.lvclass" Type="LVClass" URL="../../Shared/Map/Map.lvclass"/>
+				</Item>
+				<Item Name="Score" Type="Folder">
+					<Item Name="Score.lvclass" Type="LVClass" URL="../../Shared/Score/Score.lvclass"/>
+				</Item>
+				<Item Name="Direction" Type="Folder">
+					<Item Name="Direction.lvclass" Type="LVClass" URL="../../Shared/Direction/Direction.lvclass"/>
+				</Item>
+				<Item Name="Disconnect" Type="Folder">
+					<Item Name="Disconnect.lvclass" Type="LVClass" URL="../../Shared/Disconnect/Disconnect.lvclass"/>
+				</Item>
+				<Item Name="Connect" Type="Folder">
+					<Item Name="Connect.lvclass" Type="LVClass" URL="../../Shared/Connect/Connect.lvclass"/>
 				</Item>
 			</Item>
 			<Item Name="Food" Type="Folder">
@@ -222,12 +223,18 @@
 				<Item Name="Base64 Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/Base64/Base64 Support.lvlib"/>
 				<Item Name="LVDateTimeRec.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDateTimeRec.ctl"/>
 				<Item Name="JKI Unicode.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI.lib/Unicode/JKI Unicode.lvlib"/>
+				<Item Name="sub_Random U32.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/sub_Random U32.vi"/>
+				<Item Name="Random Number (Range) U64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) U64.vi"/>
+				<Item Name="Random Number (Range) I64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) I64.vi"/>
+				<Item Name="Random Number (Range) DBL.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) DBL.vi"/>
+				<Item Name="Random Number (Range).vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range).vi"/>
 			</Item>
 			<Item Name="Main_Host - Handle Errors.vi" Type="VI" URL="../../Main_Host/Main_Host - Handle Errors.vi"/>
 			<Item Name="Main_Host - Initialize Main Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Main Paths.vi"/>
 			<Item Name="Main_Host - Initialize Project Paths.vi" Type="VI" URL="../../Main_Host/Main_Host - Initialize Project Paths.vi"/>
 			<Item Name="Main_Host_Status STYP.ctl" Type="VI" URL="../../Main_Host/Main_Host_Status STYP.ctl"/>
 			<Item Name="Software Reference Path Anchor.vi" Type="VI" URL="../../Software Reference Path Anchor.vi"/>
+			<Item Name="Create.vi" Type="VI" URL="../../Shared/Map/Create.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Host EXE" Type="EXE">
